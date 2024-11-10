@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-blue': '#D0EFFF',
+                        'bright-blue': '#38BBFF',
+                        'bright-green': '#38FF96',
+                        'sky-blue': '#5FC8FF',
+                        'mint-green': '#5FFFAA',
+                        'soft-blue': '#93DAFF',
+                        'soft-green': '#93FFC6',
+                        'light-green': '#DBFFEC'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-custom-blue">
+    <!-- Navigation -->
+    <header class="relative min-h-[400px] md:min-h-[600px] bg-cover bg-center" style="background-image: url('public/images/landing.png');">
+        <nav class="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
+            <img src="public/images/logo.png" alt="Logo" class="w-20 h-20 rounded-full mb-4 md:mb-0">
+            
+            <div class="flex items-center space-x-4 bg-light-green/80 backdrop-blur-sm rounded-full px-4 md:px-6 py-2 shadow-lg mb-4 md:mb-0">
+                <div class="flex items-center space-x-2">
+                    <img src="public/images/goingto.png" alt="" class="w-4 h-4 md:w-6 md:h-6">
+                    <span class="text-sm md:text-base">Going to</span>
+                </div>
+                <div class="w-px h-6 bg-gray-200 hidden md:block"></div>
+                <div class="flex items-center space-x-2 hidden md:flex">
+                    <img src="public/images/dates.png" alt="" class="w-4 h-4 md:w-6 md:h-6">
+                    <span class="text-sm md:text-base">Dates</span>
+                </div>
+                <div class="w-px h-6 bg-gray-200 hidden md:block"></div>
+                <div class="flex items-center space-x-2">
+                    <img src="public/images/guests.png" alt="" class="w-4 h-4 md:w-6 md:h-6">
+                    <span class="text-sm md:text-base">Guests</span>
+                </div>
+            </div>
+
+            <img src="public/images/user.png" alt="User" class="w-12 h-12 rounded-full object-cover">
+        </nav>
+
+        <!-- Hero Content -->
+        <div class="container mx-auto px-4 pt-8 md:pt-20 text-center">
+            <h1 class="text-3xl md:text-4xl lg:text-6xl font-bold mb-4">Discover the vacation of your dreams</h1>
+            <p class="text-gray-600 mb-8 md:mb-12 text-sm md:text-base">Search low price on flights, travel, and trip trour</p>
+
+            <!-- Category Cards -->
+            <div class="flex justify-center space-x-2 md:space-x-4 mb-8 md:mb-16 relative overflow-x-auto md:overflow-x-visible">
+                <button class="absolute left-0 top-1/2 -translate-y-1/2 hidden md:block">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                
+                <div class="bg-[#FFD6D6] rounded-xl p-2 md:p-4 flex items-center space-x-2 md:space-x-4 flex-shrink-0">
+                    <img src="public/images/vocations.png" alt="" class="w-8 h-8 md:w-12 md:h-12">
+                    <div class="text-left">
+                        <div class="font-semibold text-sm md:text-base">Vacations</div>
+                        <div class="text-xs md:text-sm">1,421 vacations</div>
+                    </div>
+                </div>
+                <div class="bg-[#D6FFE1] rounded-xl p-2 md:p-4 flex items-center space-x-2 md:space-x-4 flex-shrink-0">
+                    <img src="public/images/hiking.png" alt="" class="w-8 h-8 md:w-12 md:h-12">
+                    <div class="text-left">
+                        <div class="font-semibold text-sm md:text-base">Hiking</div>
+                        <div class="text-xs md:text-sm">4,222 Hiking</div>
+                    </div>
+                </div>
+                <div class="bg-[#D6F4FF] rounded-xl p-2 md:p-4 flex items-center space-x-2 md:space-x-4 flex-shrink-0">
+                    <img src="public/images/recreational.png" alt="" class="w-8 h-8 md:w-12 md:h-12">
+                    <div class="text-left">
+                        <div class="font-semibold text-sm md:text-base">Recreational</div>
+                        <div class="text-xs md:text-sm">2,403 Recreational</div>
+                    </div>
+                </div>
+
+                <button class="absolute right-0 top-1/2 -translate-y-1/2 hidden md:block">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Upcoming Trips -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex items-center justify-between mb-6">
+            <h2 class="text-xl md:text-2xl font-bold">Upcoming Trip</h2>
+            <div class="bg-white rounded-full px-4 py-2 text-sm">3d : 10h : 10s</div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            <!-- Bali Card -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg relative">
+                <img src="public/images/bali.png" alt="Bali" class="w-full h-48 object-cover">
+                <div class="absolute bottom-0 left-0 right-0 p-4 bg-white/80 backdrop-blur-sm">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <h3 class="font-bold text-sm md:text-base">3 Day Bali</h3>
+                            <p class="text-xs md:text-sm text-gray-600">122 People</p>
+                        </div>
+                        <button class="text-bright-blue text-sm">See details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sumba Card -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg relative">
+                <img src="public/images/sumba.png" alt="Sumba" class="w-full h-48 object-cover">
+                <div class="absolute bottom-0 left-0 right-0 p-4 bg-white/80 backdrop-blur-sm">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <h3 class="font-bold text-sm md:text-base">5 Day Sumba</h3>
+                            <p class="text-xs md:text-sm text-gray-600">122 People</p>
+                        </div>
+                        <button class="text-bright-blue text-sm">See details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bromo Card -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg relative">
+                <img src="public/images/bromo.png" alt="Bromo" class="w-full h-48 object-cover">
+                <div class="absolute bottom-0 left-0 right-0 p-4 bg-white/80 backdrop-blur-sm">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <h3 class="font-bold text-sm md:text-base">2 Day Bromo</h3>
+                            <p class="text-xs md:text-sm text-gray-600">122 People</p>
+                        </div>
+                        <button class="text-bright-blue text-sm">See details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Explore Indonesia -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-xl md:text-2xl font-bold">Explore Indonesia</h2>
+            <a href="#" class="text-bright-blue flex items-center text-sm">
+                See more
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </a>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex space-x-2 md:space-x-4 mb-6 overflow-x-auto">
+            <button class="px-3 py-1 md:px-4 md:py-2 bg-white rounded-full text-xs md:text-sm whitespace-nowrap">I here</button>
+            <button class="px-3 py-1 md:px-4 md:py-2 bg-white rounded-full text-xs md:text-sm whitespace-nowrap">Nearby</button>
+            <button class="px-3 py-1 md:px-4 md:py-2 bg-bright-green text-white rounded-full text-xs md:text-sm whitespace-nowrap">Popular</button>
+            <button class="px-3 py-1 md:px-4 md:py-2 bg-white rounded-full text-xs md:text-sm whitespace-nowrap">Recommendation</button>
+            <button class="px-3 py-1 md:px-4 md:py-2 bg-white rounded-full text-xs md:text-sm whitespace-nowrap">New</button>
+        </div>
+
+        <!-- Destination Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8">
+            <!-- Cards from previous section repeated with pricing -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                <img src="public/images/sumba.png" alt="Sumba" class="w-full h-40 md:h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold mb-1 md:mb-2 text-sm md:text-base">5 Day Sumba Island</h3>
+                    <p class="text-xs md:text-sm text-gray-500 mb-1 md:mb-2">5 Days • West Nusa</p>
+                    <p class="font-bold text-sm md:text-base">$1,420<span class="text-xs md:text-sm text-gray-500">/pax</span></p>
+                </div>
+            </div>
+
+            <!-- Repeat for other destinations -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                <img src="public/images/bali.png" alt="Bali" class="w-full h-40 md:h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold mb-1 md:mb-2 text-sm md:text-base">3 Day Bali</h3>
+                    <p class="text-xs md:text-sm text-gray-500 mb-1 md:mb-2">3 Days • South Bali</p>
+                    <p class="font-bold text-sm md:text-base">$1,420<span class="text-xs md:text-sm text-gray-500">/pax</span></p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                <img src="public/images/bromo.png" alt="Bromo" class="w-full h-40 md:h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold mb-1 md:mb-2 text-sm md:text-base">2 Perfect Day Bromo</h3>
+                    <p class="text-xs md:text-sm text-gray-500 mb-1 md:mb-2">2 Days • East Java</p>
+                    <p class="font-bold text-sm md:text-base">$1,420<span class="text-xs md:text-sm text-gray-500">/pax</span></p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                <img src="public/images/rajaampat.png" alt="Raja Ampat" class="w-full h-40 md:h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold mb-1 md:mb-2 text-sm md:text-base">7 Day Raja Ampat</h3>
+                    <p class="text-xs md:text-sm text-gray-500 mb-1 md:mb-2">7 Days • West Papua</p>
+                    <p class="font-bold text-sm md:text-base">$1,420<span class="text-xs md:text-sm text-gray-500">/pax</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex justify-between items-center">
+            <button class="px-3 py-1 md:px-4 md:py-2 bg-white rounded-full text-xs md:text-sm">Back Page</button>
+            <div class="flex space-x-2">
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                <div class="w-2 h-2 rounded-full bg-bright-blue"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+            </div>
+            <button class="px-3 py-1 md:px-4 md:py-2 bg-white rounded-full text-xs md:text-sm">Next Page</button>
+        </div>
+    </div>
+
+    <!-- Safely Saved List Section -->
+    <div class="container mx-auto px-4 py-8 md:py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+                <img src="public/images/safely.png" alt="Safely Saved" class="w-full max-w-md mx-auto md:mx-0">
+            </div>
+            <div>
+                <h2 class="text-xl md:text-2xl font-bold mb-4">Safely Saved List</h2>
+                <p class="text-sm md:text-base text-gray-600 mb-6">
+                    Freshly arranged for your ease of access! Go to Saved List in the navigation bar, where
+                    we save your saved items. Progress from browse to booking is just a few clicks away.
+                    Never missing your getaways when you want to make a special moment.
+                </p>
+                <button class="px-4 py-2 md:px-6 md:py-2 bg-bright-green text-white rounded-full text-sm md:text-base">Learn More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Easy Reschedule Section -->
+    <div class="container mx-auto px-4 py-8 md:py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+                <h2 class="text-xl md:text-2xl font-bold mb-4">Easy Reschedule</h2>
+                <p class="text-sm md:text-base text-gray-600 mb-6">
+                    No more chasing after the airline. Changing your flight is only a matter of a few clicks.
+                    Easy Reschedule ultimately saves your time! Open your schedule through My Booking
+                    page in the Guest of the flight you want to reschedule.
+                </p>
+                <button class="px-4 py-2 md:px-6 md:py-2 bg-bright-green text-white rounded-full text-sm md:text-base">Learn More</button>
+            </div>
+            <div>
+                <img src="public/images/easy.png" alt="Easy Reschedule" class="w-full max-w-md ml-auto">
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Reviews -->
+    <div class="container mx-auto px-4 py-8 md:py-12">
+        <h2 class="text-xl md:text-2xl font-bold text-center mb-8">Satisfied Customer Are Our Best Ads</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <!-- Review Cards -->
+        <div class="bg-white rounded-xl p-4 md:p-6">
+            <div class="flex justify-between mb-4">
+                <h3 class="font-bold text-sm md:text-base">Anta Wijaya</h3>
+                <span class="text-sm md:text-base">4.8</span>
+            </div>
+            <p class="text-xs md:text-sm text-gray-600">Paket wisata yg bagus dan terjangkau, sangat membantu saya dalam merencanakan liburan. Selain itu pelayanan ramah yg diberikan membuat saya puas dengan pelayanan sangat baik.</p>
+        </div>
+        <div class="bg-white rounded-xl p-4 md:p-6">
+            <div class="flex justify-between mb-4">
+                <h3 class="font-bold text-sm md:text-base">Budit Santoso</h3>
+                <span class="text-sm md:text-base">4.8</span>
+            </div>
+            <p class="text-xs md:text-sm text-gray-600">Pelayanan yg sangat baik dan terjangkau. Pemandu wisata ramah membuat perjalanan wisata saya menyenangkan. Sangat direkomendasikan untuk yg ingin liburan.</p>
+        </div>
+        <div class="bg-white rounded-xl p-4 md:p-6">
+            <div class="flex justify-between mb-4">
+                <h3 class="font-bold text-sm md:text-base">Dewi Kusuma</h3>
+                <span class="text-sm md:text-base">4.9</span>
+            </div>
+            <p class="text-xs md:text-sm text-gray-600">Pengalaman liburan yang luar biasa! Semua diatur dengan baik, dari transportasi hingga akomodasi. Saya sangat merekomendasikan layanan ini untuk siapa saja yang ingin liburan tanpa stres.</p>
+        </div>
+        <div class="bg-white rounded-xl p-4 md:p-6">
+            <div class="flex justify-between mb-4">
+                <h3 class="font-bold text-sm md:text-base">Rudi Hermawan</h3>
+                <span class="text-sm md:text-base">4.7</span>
+            </div>
+            <p class="text-xs md:text-sm text-gray-600">Pilihan destinasi yang beragam dan menarik. Saya bisa menjelajahi tempat-tempat yang belum pernah saya kunjungi sebelumnya. Terima kasih atas pengalaman yang tak terlupakan!</p>
+        </div>
+        <div class="bg-white rounded-xl p-4 md:p-6">
+            <div class="flex justify-between mb-4">
+                <h3 class="font-bold text-sm md:text-base">Siti Nurhaliza</h3>
+                <span class="text-sm md:text-base">4.9</span>
+            </div>
+            <p class="text-xs md:text-sm text-gray-600">Pelayanan yang sangat profesional dan ramah. Mereka memperhatikan setiap detail perjalanan kami. Pasti akan menggunakan layanan ini lagi untuk liburan keluarga kami berikutnya.</p>
+        </div>
+        <div class="bg-white rounded-xl p-4 md:p-6">
+            <div class="flex justify-between mb-4">
+                <h3 class="font-bold text-sm md:text-base">Agus Pratama</h3>
+                <span class="text-sm md:text-base">4.8</span>
+            </div>
+            <p class="text-xs md:text-sm text-gray-600">Harga yang ditawarkan sangat kompetitif untuk kualitas layanan yang diberikan. Saya mendapatkan nilai lebih dari yang saya bayarkan. Terima kasih atas liburan yang menyenangkan!</p>
+        </div>
+        </div>
+    </div>
+
+    <!-- Banner -->
+    <div class="container mx-auto px-4 py-8 md:py-12">
+        <div class="flex justify-center items-center">
+            <img src="public/images/wemake.png" alt="We Make Every Trip Special" class="w-full max-w-3xl mx-auto">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light-green py-8 md:py-12">
+        <div class="container mx-auto px-4 text-center">
+            <img src="public/images/logo.png" alt="Logo" class="w-32 h-32 rounded-full mx-auto mb-4">
+            <h2 class="text-lg md:text-xl font-bold mb-4">Discover new destinations and create lasting memories<br>with every travel experience.</h2>
+            
+            <div class="max-w-md mx-auto flex gap-2 mb-8">
+                <input type="email" placeholder="Enter Your Email" class="flex-1 px-4 py-2 rounded-full text-sm">
+                <button class="px-4 py-2 md:px-6 md:py-2 bg-bright-green text-white rounded-full text-sm">Subscribe</button>
+            </div>
+
+            <div class="flex flex-wrap justify-center space-x-4 md:space-x-8 text-xs md:text-sm">
+                <a href="#" class="text-gray-600 mb-2">Features</a>
+                <a href="#" class="text-gray-600 mb-2">News & Blogs</a>
+                <a href="#" id="about-us" class="text-gray-600 mb-2">About Us</a>
+                <a href="#" class="text-gray-600 mb-2">Privacy</a>
+                <a href="#" class="text-gray-600 mb-2">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+</html>

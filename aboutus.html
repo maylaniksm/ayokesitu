@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AyoKesitu - Travel Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-blue': '#D0EFFF',
+                        'bright-blue': '#38BBFF',
+                        'bright-green': '#38FF96',
+                        'sky-blue': '#5FC8FF',
+                        'mint-green': '#5FFFAA',
+                        'soft-blue': '#93DAFF',
+                        'soft-green': '#93FFC6',
+                        'light-green': '#DBFFEC'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-custom-blue min-h-screen">
+    <!-- Navigation -->
+    <nav class="container mx-auto px-4 py-6 flex items-center justify-between">
+        <img src="public/images/logo.png" alt="Logo" class="w-20 h-20 rounded-full mb-4 md:mb-0">
+        
+        <div class="flex items-center bg-light-green bg-opacity-50 rounded-full px-6 py-3 shadow-lg max-w-2xl w-full mx-8">
+            <div class="flex items-center flex-1 gap-3">
+                <img src="public/images/goingto.png" alt="" class="h-5 w-5">
+                <span class="text-gray-600">Going to</span>
+            </div>
+            <div class="border-l border-gray-300 mx-6 h-5"></div>
+            <div class="flex items-center flex-1 gap-3">
+                <img src="public/images/dates.png" alt="" class="h-5 w-5">
+                <span class="text-gray-600">Dates</span>
+            </div>
+            <div class="border-l border-gray-300 mx-6 h-5"></div>
+            <div class="flex items-center flex-1 gap-3">
+                <img src="public/images/guests.png" alt="" class="h-5 w-5">
+                <span class="text-gray-600">Guests</span>
+            </div>
+            <button class="p-2 rounded-full ml-4">
+                <img src="public/images/search.png" alt="Search" class="h-5 w-5">
+            </button>
+        </div>
+        
+        <button class="p-2 rounded-full shadow-lg">
+            <img src="public/images/user.png" alt="User profile" class="h-5 w-5">
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative mt-4 mx-auto container px-4">
+        <div class="bg-sky-blue rounded-3xl overflow-hidden relative">
+            <img src="public/images/landing3.png" alt="Mountain landscape" class="w-full h-[400px] object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-10 flex flex-col items-center justify-center space-y-6">
+                <button class="bg-white px-8 py-2 rounded-full text-gray-700 hover:bg-gray-50 transition-colors">
+                    Carrier
+                </button>
+                <h1 class="text-5xl font-bold text-black">Let's Collaborate</h1>
+                <button class="bg-white px-8 py-2 rounded-full text-gray-700 hover:bg-gray-50 transition-colors">
+                    Explore Opportunities
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistics Section -->
+    <div class="container mx-auto px-4 py-16">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h2 class="text-4xl font-bold leading-tight">We're Shaping the Future of Travel Experiences</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    "Gain insights into traveler preferences such as favorite destinations, travel seasons, and activity preferences across various countries and cultures, allowing you to create immersive and unforgettable experiences that truly resonate with your audience. Keep travelers informed with updates on the latest travel trends, tips, and exclusive offers tailored to their destinations and interests, making it easier than ever to build a community of explorers who share your passion for adventure."
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="text-3xl font-bold mb-2">5 Million</div>
+                    <div class="text-gray-600 text-sm">Travelers Engaged Every Month</div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="text-3xl font-bold mb-2">24 Million</div>
+                    <div class="text-gray-600 text-sm">Personalized Travel Notifications Sent Every Day</div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="text-3xl font-bold mb-2">17 Million</div>
+                    <div class="text-gray-600 text-sm">Daily Interactions on Travel Tips & Guides</div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="text-3xl font-bold mb-2">11</div>
+                    <div class="text-gray-600 text-sm">Exclusive Travel Packages & Partnerships</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-mint-green mt-16">
+        <div class="container mx-auto px-4 py-16 text-center">
+            <img src="public/images/logo.png" alt="Logo" class="w-32 h-32 rounded-full mx-auto mb-4">
+            <p class="text-xl font-medium max-w-2xl mx-auto mb-16">
+                Discover new destinations and create lasting memories with every travel experience.
+            </p>
+            <div class="flex justify-center space-x-8 text-gray-600">
+                <a href="#" class="hover:text-gray-900">Features</a>
+                <a href="#" class="hover:text-gray-900">News & Blogs</a>
+                <a href="#" id="about-us" class="text-gray-600 mb-2">About Us</a>
+                <a href="#" class="hover:text-gray-900">Privacy</a>
+                <a href="#" class="hover:text-gray-900">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="aboutus.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-blue': '#D0EFFF',
+                        'bright-blue': '#38BBFF',
+                        'bright-green': '#38FF96',
+                        'sky-blue': '#5FC8FF',
+                        'mint-green': '#5FFFAA',
+                        'soft-blue': '#93DAFF',
+                        'soft-green': '#93FFC6',
+                        'light-green': '#DBFFEC'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-sky-blue to-mint-green">
+    <!-- Hero Section -->
+    <div class="relative h-[300px] md:h-[400px]">
+        <img src="public/images/rajaampat.png" alt="Raja Ampat Islands" class="w-full h-full object-cover">
+        <!-- Navigation Bar -->
+        <div class="absolute top-4 w-full px-4 md:px-8">
+            <div class="max-w-6xl mx-auto flex justify-between items-center">
+                <div class="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full p-1">
+                    <div class="flex items-center gap-2 bg-custom-blue rounded-full px-4 py-2">
+                        <img src="public/images/goingto.png" alt="Location" class="w-5 h-5">
+                        <span>Going to</span>
+                    </div>
+                    <div class="flex items-center gap-2 px-4 py-2">
+                        <img src="public/images/dates.png" alt="Calendar" class="w-5 h-5">
+                        <span>Dates</span>
+                    </div>
+                    <div class="flex items-center gap-2 px-4 py-2">
+                        <img src="public/images/guests.png" alt="Guests" class="w-5 h-5">
+                        <span>Guests</span>
+                    </div>
+                </div>
+                <button class="bg-white/80 backdrop-blur-sm rounded-full p-2">
+                    <img src="public/images/user.png" alt="User profile" class="w-6 h-6">
+                </button>
+            </div>
+        </div>
+        <!-- Hero Content -->
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Fun experiences for</h1>
+                <h2 class="text-3xl md:text-4xl font-bold">unforgettable trips</h2>
+                <div class="mt-6">
+                    <input type="search" placeholder="Search destinations..." class="w-64 md:w-80 px-6 py-2 rounded-full text-black">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="max-w-6xl mx-auto px-4 pt-8">
+        <nav class="flex justify-center gap-8 text-gray-600">
+            <button class="px-4 py-2">Tours</button>
+            <button class="px-4 py-2 text-bright-blue border-b-2 border-bright-blue">Recreational</button>
+            <button class="px-4 py-2">Hiking</button>
+        </nav>
+    </div>
+
+    <!-- Let's Travel Banner -->
+    <div class="max-w-6xl mx-auto px-4 py-8">
+        <div class="bg-white rounded-3xl overflow-hidden">
+            <img src="public/images/letstravel.png" alt="Let's Travel" class="w-full">
+        </div>
+    </div>
+
+    <!-- Travel Packages Grid -->
+    <div class="max-w-6xl mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Repeat this block 12 times for the grid -->
+            <div class="bg-white rounded-3xl overflow-hidden p-3">
+                <div class="relative h-48">
+                    <img src="public/images/bali.png" alt="Bali Resort" class="w-full h-full object-cover rounded-2xl">
+                </div>
+                <div class="p-3">
+                    <h3 class="font-semibold">3 Day Bali</h3>
+                    <p class="text-sm text-gray-500">5 Nov - 8 Nov 2024</p>
+                    <p class="mt-2">
+                        <span class="font-semibold">$1,420</span>
+                        <span class="text-sm text-gray-500">/person</span>
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl overflow-hidden p-3">
+                <div class="relative h-48">
+                    <img src="public/images/bali.png" alt="Bali Resort" class="w-full h-full object-cover rounded-2xl">
+                </div>
+                <div class="p-3">
+                    <h3 class="font-semibold">3 Day Bali</h3>
+                    <p class="text-sm text-gray-500">5 Nov - 8 Nov 2024</p>
+                    <p class="mt-2">
+                        <span class="font-semibold">$1,420</span>
+                        <span class="text-sm text-gray-500">/person</span>
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl overflow-hidden p-3">
+                <div class="relative h-48">
+                    <img src="public/images/bali.png" alt="Bali Resort" class="w-full h-full object-cover rounded-2xl">
+                </div>
+                <div class="p-3">
+                    <h3 class="font-semibold">3 Day Bali</h3>
+                    <p class="text-sm text-gray-500">5 Nov - 8 Nov 2024</p>
+                    <p class="mt-2">
+                        <span class="font-semibold">$1,420</span>
+                        <span class="text-sm text-gray-500">/person</span>
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl overflow-hidden p-3">
+                <div class="relative h-48">
+                    <img src="public/images/bali.png" alt="Bali Resort" class="w-full h-full object-cover rounded-2xl">
+                </div>
+                <div class="p-3">
+                    <h3 class="font-semibold">3 Day Bali</h3>
+                    <p class="text-sm text-gray-500">5 Nov - 8 Nov 2024</p>
+                    <p class="mt-2">
+                        <span class="font-semibold">$1,420</span>
+                        <span class="text-sm text-gray-500">/person</span>
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl overflow-hidden p-3">
+                <div class="relative h-48">
+                    <img src="public/images/bali.png" alt="Bali Resort" class="w-full h-full object-cover rounded-2xl">
+                </div>
+                <div class="p-3">
+                    <h3 class="font-semibold">3 Day Bali</h3>
+                    <p class="text-sm text-gray-500">5 Nov - 8 Nov 2024</p>
+                    <p class="mt-2">
+                        <span class="font-semibold">$1,420</span>
+                        <span class="text-sm text-gray-500">/person</span>
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl overflow-hidden p-3">
+                <div class="relative h-48">
+                    <img src="public/images/bali.png" alt="Bali Resort" class="w-full h-full object-cover rounded-2xl">
+                </div>
+                <div class="p-3">
+                    <h3 class="font-semibold">3 Day Bali</h3>
+                    <p class="text-sm text-gray-500">5 Nov - 8 Nov 2024</p>
+                    <p class="mt-2">
+                        <span class="font-semibold">$1,420</span>
+                        <span class="text-sm text-gray-500">/person</span>
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl overflow-hidden p-3">
+                <div class="relative h-48">
+                    <img src="public/images/bali.png" alt="Bali Resort" class="w-full h-full object-cover rounded-2xl">
+                </div>
+                <div class="p-3">
+                    <h3 class="font-semibold">3 Day Bali</h3>
+                    <p class="text-sm text-gray-500">5 Nov - 8 Nov 2024</p>
+                    <p class="mt-2">
+                        <span class="font-semibold">$1,420</span>
+                        <span class="text-sm text-gray-500">/person</span>
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl overflow-hidden p-3">
+                <div class="relative h-48">
+                    <img src="public/images/bali.png" alt="Bali Resort" class="w-full h-full object-cover rounded-2xl">
+                </div>
+                <div class="p-3">
+                    <h3 class="font-semibold">3 Day Bali</h3>
+                    <p class="text-sm text-gray-500">5 Nov - 8 Nov 2024</p>
+                    <p class="mt-2">
+                        <span class="font-semibold">$1,420</span>
+                        <span class="text-sm text-gray-500">/person</span>
+                    </p>
+                </div>
+            </div>
+            <!-- Repeat the above div 11 more times -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light-green py-16 mt-16">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <img src="public/images/logo.png" alt="Logo" class="w-32 h-32 rounded-full mx-auto mb-4">
+            <p class="text-lg mb-12">
+                Discover new destinations and create lasting memories<br>
+                with every travel experience.
+            </p>
+            <nav class="flex justify-center gap-8 text-gray-600">
+                <a href="#" class="hover:text-bright-blue">Features</a>
+                <a href="#" class="hover:text-bright-blue">News & Blogs</a>
+                <a href="#" id="about-us" class="text-gray-600 mb-2">About Us</a>
+                <a href="#" class="hover:text-bright-blue">Privacy</a>
+                <a href="#" class="hover:text-bright-blue">Cookies</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="goingto.js"></script>
+</body>
+</html>

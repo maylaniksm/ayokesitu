@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-blue': '#D0EFFF',
+                        'bright-blue': '#38BBFF',
+                        'bright-green': '#38FF96',
+                        'sky-blue': '#5FC8FF',
+                        'mint-green': '#5FFFAA',
+                        'soft-blue': '#93DAFF',
+                        'soft-green': '#93FFC6',
+                        'light-green': '#DBFFEC'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-custom-blue min-h-screen">
+    <!-- Navigation -->
+    <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+        <img src="public/images/logo.png" alt="Logo" class="w-20 h-20 rounded-full mb-4 md:mb-0">
+        
+        <div class="flex items-center space-x-4 bg-white/80 backdrop-blur-sm rounded-full px-6 py-2 shadow-lg">
+            <div class="flex items-center space-x-2">
+                <img src="public/images/goingto.png" alt="" class="w-5 h-5">
+                <span>Going to</span>
+            </div>
+            <div class="w-px h-6 bg-gray-200"></div>
+            <div class="flex items-center space-x-2">
+                <span>Dates</span>
+            </div>
+            <div class="w-px h-6 bg-gray-200"></div>
+            <div class="flex items-center space-x-2">
+                <img src="public/images/guests.png" alt="" class="w-5 h-5">
+                <span>Guests</span>
+            </div>
+        </div>
+
+        <div class="flex items-center space-x-2">
+            <img src="public/images/user.png" alt="User" class="w-8 h-8 rounded-full">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+            <div class="p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Left Column - Forms -->
+                    <div class="space-y-8">
+                        <!-- Personal Information -->
+                        <div class="bg-soft-blue rounded-xl p-6">
+                            <h2 class="text-lg font-semibold mb-4">Personal Information</h2>
+                            <div class="space-y-4">
+                                <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg border-0 bg-white">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <input type="email" placeholder="Email" class="w-full p-3 rounded-lg border-0 bg-white">
+                                    <input type="tel" placeholder="Phone Number" class="w-full p-3 rounded-lg border-0 bg-white">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Shipping Address -->
+                        <div class="bg-soft-blue rounded-xl p-6">
+                            <h2 class="text-lg font-semibold mb-4">Shipping Address</h2>
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <input type="text" placeholder="Address" class="w-full p-3 rounded-lg border-0 bg-white">
+                                    <input type="text" placeholder="Postal Code" class="w-full p-3 rounded-lg border-0 bg-white">
+                                </div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <input type="text" placeholder="City" class="w-full p-3 rounded-lg border-0 bg-white">
+                                    <input type="text" placeholder="Country" class="w-full p-3 rounded-lg border-0 bg-white">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Voucher -->
+                        <div class="bg-soft-blue rounded-xl p-6">
+                            <h2 class="text-lg font-semibold mb-4">Voucher</h2>
+                            <input type="text" placeholder="Select Voucher" class="w-full p-3 rounded-lg border-0 bg-white">
+                        </div>
+
+                        <!-- Payment Methods -->
+                        <div class="bg-soft-blue rounded-xl p-6">
+                            <h2 class="text-lg font-semibold mb-4">Payment Methods</h2>
+                            <div class="space-y-4">
+                                <div class="flex space-x-4">
+                                    <label class="flex items-center space-x-2">
+                                        <input type="radio" name="payment" class="form-radio text-bright-blue">
+                                        <span>Cash On Delivery</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2">
+                                        <input type="radio" name="payment" class="form-radio text-bright-blue">
+                                        <span>Credit or Debit</span>
+                                    </label>
+                                </div>
+                                <input type="text" placeholder="Cardholder Name" class="w-full p-3 rounded-lg border-0 bg-white">
+                                <input type="text" placeholder="Card Number" class="w-full p-3 rounded-lg border-0 bg-white">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <input type="text" placeholder="EXP Date" class="w-full p-3 rounded-lg border-0 bg-white">
+                                    <input type="text" placeholder="CVC" class="w-full p-3 rounded-lg border-0 bg-white">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Items -->
+                    <div class="bg-soft-blue rounded-xl p-6">
+                        <h2 class="text-lg font-semibold mb-6">Item</h2>
+                        <div class="space-y-4">
+                            <!-- Item 1 -->
+                            <div class="flex items-center justify-between bg-white p-4 rounded-lg">
+                                <div class="flex items-center space-x-4">
+                                    <img src="public/images/bromo.png" alt="Bromo" class="w-16 h-16 object-cover rounded-lg">
+                                    <div>
+                                        <p class="font-medium">Bromo</p>
+                                        <button class="text-gray-500 text-sm flex items-center">
+                                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                            Remove
+                                        </button>
+                                    </div>
+                                </div>
+                                <span class="font-semibold">$1250.32</span>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="flex items-center justify-between bg-white p-4 rounded-lg">
+                                <div class="flex items-center space-x-4">
+                                    <img src="public/images/rajaampat.png" alt="Raja Ampat" class="w-16 h-16 object-cover rounded-lg">
+                                    <div>
+                                        <p class="font-medium">Raja Ampat</p>
+                                        <button class="text-gray-500 text-sm flex items-center">
+                                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                            Remove
+                                        </button>
+                                    </div>
+                                </div>
+                                <span class="font-semibold">$550.3</span>
+                            </div>
+
+                            <!-- Order Summary -->
+                            <div class="border-t border-gray-200 pt-4 mt-6 space-y-2">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Subtotal</span>
+                                    <span class="font-semibold">$80.00</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Discount</span>
+                                    <span class="font-semibold">$0.00</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Shipping</span>
+                                    <span class="font-semibold">$2.00</span>
+                                </div>
+                                <div class="flex justify-between pt-4 border-t border-gray-200">
+                                    <span class="text-lg font-semibold">Total</span>
+                                    <span class="text-lg font-semibold">$82.00</span>
+                                </div>
+                            </div>
+
+                            <button class="w-full bg-bright-green text-white py-4 rounded-full mt-6">
+                                Pay Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="details_payment.js"></script>
+</body>
+</html>
